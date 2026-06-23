@@ -38,3 +38,11 @@ stream
    .gather(...)
    .map(...)
 ````
+
+Ordem de aprendizado que eu seguiria
+
+Gatherers.windowFixed()
+Gatherers.windowSliding()
+Gatherers.fold()
+Criar um Gatherer customizado
+Entender Initializer, Integrator, Combiner e Finisher
