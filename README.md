@@ -26,3 +26,15 @@ Os Gatherers permitem criar novas operações intermediárias stateful.
 
 ## A nova API:
 
+````
+stream.gather(...)
+````
+
+Fica entre as etapas do pipeline.
+
+````
+stream
+   .filter(...)
+   .gather(...)
+   .map(...)
+````
