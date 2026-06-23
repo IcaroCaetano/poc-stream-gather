@@ -6,17 +6,23 @@ O objetivo é permitir a criação de operações intermediárias customizadas p
 
 Antes, o Stream possuía operações prontas:
 
+```
 map()
 filter()
 flatMap()
 sorted()
 distinct()
 limit()
+````
 
 Mas quando precisávamos de algo mais complexo, éramos obrigados a:
 
-criar um Collector
-armazenar estado externo
-utilizar loops imperativos
+- criar um Collector
+- armazenar estado externo
+- utilizar loops imperativos
 
 Os Gatherers permitem criar novas operações intermediárias stateful.
+
+
+## A nova API:
+
