@@ -50,3 +50,5 @@ Entender Initializer, Integrator, Combiner e Finisher
 ### Gatherers.windowFixed() 
 
 cria janelas (grupos) de tamanho fixo dentro de um Stream.
+
+Em vez de processar um elemento por vez, ele agrupa os elementos em listas de tamanho definido.
