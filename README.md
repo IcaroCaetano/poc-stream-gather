@@ -55,7 +55,7 @@ Em vez de processar um elemento por vez, ele agrupa os elementos em listas de ta
 
 #### Exemplo simples
 
-```
+```java
 var numeros = List.of(1, 2, 3, 4, 5, 6, 7);
 
 numeros.stream()
