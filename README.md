@@ -64,3 +64,11 @@ numeros.stream()
 
        .forEach(System.out::println);
 ```
+
+Saida:
+
+```
+[1, 2, 3]
+[4, 5, 6]
+[7]
+````
