@@ -41,7 +41,7 @@ stream
 
 Ordem de aprendizado que eu seguiria
 
-Gatherers.windowFixed()
+Gatherers.windowFixed() OK
 Gatherers.windowSliding()
 Gatherers.fold()
 Criar um Gatherer customizado
@@ -49,13 +49,13 @@ Entender Initializer, Integrator, Combiner e Finisher
 
 ### Gatherers.windowFixed() 
 
-cria janelas (grupos) de tamanho fixo dentro de um Stream.
+Criar janelas (grupos) de tamanho fixo dentro de um Stream.
 
 Em vez de processar um elemento por vez, ele agrupa os elementos em listas de tamanho definido.
 
 #### Exemplo simples
 
-```java
+```
 var numeros = List.of(1, 2, 3, 4, 5, 6, 7);
 
 numeros.stream()
@@ -72,3 +72,24 @@ Saida:
 [4, 5, 6]
 [7]
 ````
+
+Saida Billing Service:
+
+```
+Enviando lote
+Order[id=1, customer=João, amount=150.0]
+Order[id=2, customer=Maria, amount=220.0]
+Order[id=3, customer=José, amount=300.0]
+----------------
+Enviando lote
+Order[id=4, customer=Pedro, amount=180.0]
+Order[id=5, customer=Ana, amount=90.0]
+Order[id=6, customer=Lucas, amount=450.0]
+----------------
+Enviando lote
+Order[id=7, customer=Carla, amount=120.0]
+----------------
+
+Process finished with exit code 0
+`````
+
