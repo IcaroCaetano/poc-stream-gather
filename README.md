@@ -93,3 +93,10 @@ Order[id=7, customer=Carla, amount=120.0]
 Process finished with exit code 0
 `````
 
+### Então por que windowFixed() existe?
+
+Porque a equipe do Java percebeu que alguns padrões são extremamente comuns.
+Eles já entregaram algumas implementações prontas.
+Eles usaram o Gather para criar uma operacao comum que já é bem usada. Por essa razão serve
+de exemplo para aplicação do Gather.
+
