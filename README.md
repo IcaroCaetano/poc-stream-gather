@@ -54,3 +54,13 @@ cria janelas (grupos) de tamanho fixo dentro de um Stream.
 Em vez de processar um elemento por vez, ele agrupa os elementos em listas de tamanho definido.
 
 #### Exemplo simples
+
+```
+var numeros = List.of(1, 2, 3, 4, 5, 6, 7);
+
+numeros.stream()
+
+       .gather(Gatherers.windowFixed(3))
+
+       .forEach(System.out::println);
+```
