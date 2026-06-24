@@ -46,3 +46,5 @@ Gatherers.windowSliding()
 Gatherers.fold()
 Criar um Gatherer customizado
 Entender Initializer, Integrator, Combiner e Finisher
+
+## Gatherers.windowFixed() cria janelas (grupos) de tamanho fixo dentro de um Stream.
