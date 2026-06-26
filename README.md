@@ -100,3 +100,9 @@ Eles já entregaram algumas implementações prontas.
 Eles usaram o Gather para criar uma operacao comum que já é bem usada. Por essa razão serve
 de exemplo para aplicação do Gather.
 
+
+
+### Depois do Stream Gatherers
+
+A linguagem passou a dizer:
+"Além das ferramentas prontas, agora você pode construir as suas próprias ferramentas e encaixá-las no pipeline do Stream."
