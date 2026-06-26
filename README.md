@@ -106,3 +106,19 @@ de exemplo para aplicação do Gather.
 
 A linguagem passou a dizer:
 "Além das ferramentas prontas, agora você pode construir as suas próprias ferramentas e encaixá-las no pipeline do Stream."
+
+```
+filter
+
+detectDuplicates
+
+rateLimiter
+
+batchProcessor
+
+windowFixed
+
+windowSliding
+
+map
+```
