@@ -122,3 +122,28 @@ windowSliding
 
 map
 ```
+
+## Criando um Gather proprio
+
+### Primeiro, vamos entender a estrutura de um Gatherer
+
+Um Gatherer é composto por quatro partes:
+
+````
+                Stream
+                   │
+                   ▼
+           Initializer
+                   │
+                   ▼
+     Integrator (para cada elemento)
+                   │
+                   ▼
+            Combiner (paralelo)
+                   │
+                   ▼
+             Finisher
+                   │
+                   ▼
+          Próxima etapa do Stream
+````
