@@ -147,3 +147,32 @@ Um Gatherer é composto por quatro partes:
                    ▼
           Próxima etapa do Stream
 ````
+
+
+### Vamos criar um Gatherer simples
+
+Imagine que queremos uma nova operação no Stream chamada:
+
+````
+.repeat(3)
+````
+
+Como ela não existe, podemos implementá-la com um Gatherer.
+
+Entrada:
+
+````
+Java
+25
+````
+
+Saída:
+
+````
+Java
+Java
+Java
+25
+25
+25
+````
