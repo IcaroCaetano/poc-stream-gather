@@ -1,6 +1,7 @@
 package com.project.poc_stream_gather;
 
 import com.project.poc_stream_gather.model.Order;
+import com.project.poc_stream_gather.own_gather.MyGatherers;
 import com.project.poc_stream_gather.service.BillingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,6 +27,15 @@ public class PocStreamGatherApplication {
 		var service = new BillingService();
 
 		service.process(orders);
+
+
+		List.of("Java", "25")
+
+				.stream()
+
+				.gather(MyGatherers.repeat(3))
+
+				.forEach(System.out::println);
 	}
 
 }
