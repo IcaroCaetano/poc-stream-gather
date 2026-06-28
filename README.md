@@ -179,6 +179,10 @@ Java
 
 ### Decompondo 
 
+```
+public static <T> Gatherer<T, Void, T> repeat(int times) {
+```
+
 Isso declara que o método é genérico.
 Ou seja, ele funciona para qualquer tipo.
 
