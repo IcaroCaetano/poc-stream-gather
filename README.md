@@ -198,3 +198,15 @@ pode ser usado em um:
 ```
 Stream<String>
 ```
+
+ou
+
+```
+Stream<Integer>
+```
+
+ou 
+
+```
+Stream<Order>
+```
