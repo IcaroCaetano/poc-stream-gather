@@ -184,7 +184,7 @@ public static <T> Gatherer<T, Void, T> repeat(int times) {
 ```
 
 
-#### 1 
+#### 1.
 
 ```
 public static <T>
