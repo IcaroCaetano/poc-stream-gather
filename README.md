@@ -179,6 +179,16 @@ Java
 
 ### Decompondo 
 
+Isso declara que o método é genérico.
+Ou seja, ele funciona para qualquer tipo.
+
+
 ```
 public static <T>
 ````
+
+Por exemplo:
+
+```
+repeat(3)
+```
