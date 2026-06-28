@@ -176,3 +176,9 @@ Java
 25
 25
 ````
+
+### Decompondo 
+
+```
+public static <T>
+````
