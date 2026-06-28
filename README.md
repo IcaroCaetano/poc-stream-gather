@@ -192,3 +192,9 @@ Por exemplo:
 ```
 repeat(3)
 ```
+
+pode ser usado em um:
+
+```
+Stream<String>
+```
