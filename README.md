@@ -210,3 +210,12 @@ ou
 ```
 Stream<Order>
 ```
+
+ou seja:
+
+```
+T = Order
+```
+
+
+Ou seja, o compilador descobre automaticamente qual é o tipo.
