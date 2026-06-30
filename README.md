@@ -234,3 +234,23 @@ Nosso Gatherer:
 ```
 Gatherer<T, Void, T>
 ```
+
+significa:
+
+```
+Recebe um T
+
+↓
+
+Não guarda estado
+
+↓
+
+Produz um T
+```
+
+Outro exemplo:
+
+```
+Gatherer<Order, List<Order>, Invoice>
+```
