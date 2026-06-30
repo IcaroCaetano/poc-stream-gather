@@ -226,3 +226,11 @@ T = Order
 
 
 Ou seja, o compilador descobre automaticamente qual é o tipo.
+
+#### Visualizando
+
+Nosso Gatherer:
+
+```
+Gatherer<T, Void, T>
+```
