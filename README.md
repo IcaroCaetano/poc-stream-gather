@@ -254,3 +254,19 @@ Outro exemplo:
 ```
 Gatherer<Order, List<Order>, Invoice>
 ```
+
+Seria:
+
+```
+Recebe Order
+
+↓
+
+Guarda uma List<Order>
+
+↓
+
+Produz Invoice
+```
+
+### Por que existe esse parâmetro de estado?
