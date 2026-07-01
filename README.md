@@ -270,3 +270,24 @@ Produz Invoice
 ```
 
 ### Por que existe esse parâmetro de estado?
+
+Imagine que você queira criar um Gatherer que agrupe 3 elementos.
+
+Entrada:
+
+````
+1
+2
+3
+4
+5
+6
+````
+
+Quando chega o primeiro elemento:
+
+````
+Estado:
+
+[1]
+````
