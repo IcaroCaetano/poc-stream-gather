@@ -291,3 +291,26 @@ Estado:
 
 [1]
 ````
+Segundo:
+
+````
+Estado:
+
+[1,2]
+````
+
+Terceiro:
+
+````
+Estado:
+
+[1,2,3]
+````
+
+Agora ele pode emitir:
+
+````
+[1,2,3]
+````
+
+Sem um estado interno, isso seria impossível.
