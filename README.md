@@ -314,3 +314,13 @@ Agora ele pode emitir:
 ````
 
 Sem um estado interno, isso seria impossível.
+
+Gatherer<T, Void, T>:
+
+### Resumindo:
+
+- primeiro T: tipo de entrada do Stream;
+
+- Void: não há estado interno;
+
+- segundo T: tipo de saída do Gatherer.
