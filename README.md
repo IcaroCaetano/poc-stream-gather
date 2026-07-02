@@ -324,3 +324,8 @@ Gatherer<T, Void, T>:
 - Void: não há estado interno;
 
 - segundo T: tipo de saída do Gatherer.
+
+
+### Gatherer.ofSequential(
+
+Ela é a responsável por "montar" o Gatherer e introduz os conceitos de Initializer, Integrator, Combiner e Finisher.
