@@ -329,3 +329,12 @@ Gatherer<T, Void, T>:
 ### Gatherer.ofSequential(
 
 Ela é a responsável por "montar" o Gatherer e introduz os conceitos de Initializer, Integrator, Combiner e Finisher.
+
+
+"Crie um Gatherer que será executado de forma sequencial."
+
+Ou seja, ele informa à API de Streams que esse Gatherer não precisa se preocupar com processamento paralelo.
+
+#### O que acontece internamente?
+
+Quando você escreve:
