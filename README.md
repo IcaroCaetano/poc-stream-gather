@@ -355,3 +355,4 @@ Crie um Gatherer composto por:
 Não preciso de Combiner.
 Não preciso lidar com execução paralela.
 ````
+#### Comparando com Gatherer.of()
