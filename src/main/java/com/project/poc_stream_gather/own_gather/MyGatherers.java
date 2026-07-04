@@ -20,4 +20,23 @@ public class MyGatherers {
                 })
         );
     }
+
+public static Gatherer<Integer, int[], Integer> runningSum() {
+
+        return Gatherer.ofSequential(
+
+                // Initializer
+                () -> new int[]{0},
+
+                // Integrator
+                Gatherer.Integrator.ofGreedy((state, element, downstream) -> {
+
+                    state[0] += element;
+
+                    downstream.push(state[0]);
+
+                    return true;
+                })
+        );
+    }
 }
