@@ -356,3 +356,6 @@ Não preciso de Combiner.
 Não preciso lidar com execução paralela.
 ````
 #### Comparando com Gatherer.of()
+
+
+### O papel do downstream.push()
