@@ -36,6 +36,13 @@ public class PocStreamGatherApplication {
 				.gather(MyGatherers.repeat(3))
 
 				.forEach(System.out::println);
+
+
+Stream.of(10, 20, 30, 40)
+
+     .gather(MyGatherers.runningSum())
+     
+     .forEach(System.out::println);
 	}
 
 }
