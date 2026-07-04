@@ -359,3 +359,22 @@ Não preciso lidar com execução paralela.
 
 
 ### O papel do downstream.push()
+
+Essa é a parte mais importante.
+Imagine um pipeline:
+
+```
+Stream
+   │
+   ▼
+Gatherer
+   │
+   ▼
+map()
+   │
+   ▼
+filter()
+   │
+   ▼
+forEach()
+```
