@@ -378,3 +378,8 @@ filter()
    ▼
 forEach()
 ```
+
+Cada chamada a:
+
+downstream.push(element);
+envia um elemento para a próxima etapa do pipeline.
