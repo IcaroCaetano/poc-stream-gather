@@ -383,3 +383,13 @@ Cada chamada a:
 
 downstream.push(element);
 envia um elemento para a próxima etapa do pipeline.
+
+
+Se você fizer:
+
+```
+downstream.push(element);
+```
+
+uma vez, a próxima etapa recebe um elemento.
+Se fizer:
