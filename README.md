@@ -393,3 +393,7 @@ downstream.push(element);
 
 uma vez, a próxima etapa recebe um elemento.
 Se fizer:
+
+
+### Cenário
+Imagine que você recebe uma sequência de números e quer emitir a soma acumulada.
