@@ -39,4 +39,21 @@ public static Gatherer<Integer, int[], Integer> runningSum() {
                 })
         );
     }
+
+public static <T> Gatherer<T, Set<T>, T> distinctCustom() {
+
+        return Gatherer.ofSequential(
+
+                HashSet::new,
+
+                Gatherer.Integrator.ofGreedy((seen, element, downstream) -> {
+
+                    if (seen.add(element)) {
+                        downstream.push(element);
+                    }
+
+                    return true;
+                })
+        );
+    }
 }
