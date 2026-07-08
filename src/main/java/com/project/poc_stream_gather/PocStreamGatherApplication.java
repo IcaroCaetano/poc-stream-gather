@@ -45,4 +45,16 @@ Stream.of(10, 20, 30, 40)
      .forEach(System.out::println);
 	}
 
+
+Stream.of(
+        "Java",
+        "Java",
+        "Spring",
+        "Java",
+        "Docker",
+        "Docker",
+        "Kubernetes"
+)
+.gather(MyGatherers.distinctCustom())
+.forEach(System.out::println);
 }
