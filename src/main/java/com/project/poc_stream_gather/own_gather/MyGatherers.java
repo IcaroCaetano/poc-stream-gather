@@ -45,9 +45,10 @@ public class MyGatherers {
     public static <T> Gatherer<T, Set<T>, T> distinctCustom() {
 
         return Gatherer.ofSequential(
-
+                // Initializer
                 HashSet::new,
 
+                // Integrator
                 Gatherer.Integrator.ofGreedy((seen, element, downstream) -> {
 
                     if (seen.add(element)) {

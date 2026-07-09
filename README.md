@@ -358,10 +358,17 @@ Não preciso lidar com execução paralela.
 #### Comparando com Gatherer.of()
 
 
-### O papel do downstream.push()
+### Gatherer.Downstream<? super T> downstream 
+é o mecanismo pelo qual um Gatherer produz resultados para a próxima etapa do Stream. Com ele você pode:
 
-Essa é a parte mais importante.
-Imagine um pipeline:
+- Enviar um elemento (downstream.push(element)).
+- Enviar vários elementos (chamando push() várias vezes).
+- Não enviar nenhum elemento (não chamando push()).
+- Verificar se o pipeline ainda deseja receber elementos pelo valor booleano retornado por push().
+- Encerrar o processamento antecipadamente retornando false do integrador.
+
+É por isso que o Downstream é considerado o componente central de um Gatherer: ele define como os elementos 
+transformados fluem para o restante da pipeline do Stream.
 
 ```
 Stream
@@ -379,21 +386,41 @@ filter()
 forEach()
 ```
 
-Cada chamada a:
+### O método push()
 
+O método mais importante é:
+
+````
+downstream.push(valor);
+````
+
+#### Ele envia um elemento para o próximo estágio do Stream.
+
+Exemplo:
+
+````
+downstream.push("Java");
+````
+
+É equivalente a dizer:
+
+"Próximo estágio, aqui está um novo elemento."
+
+#### Você pode enviar vários elementos
+
+````
 downstream.push(element);
-envia um elemento para a próxima etapa do pipeline.
+downstream.push(element.toUpperCase());
+downstream.push(element + "!");
+````
 
+#### Ou nenhum elemento
 
-Se você fizer:
+Você simplesmente não chama push().
 
-```
-downstream.push(element);
-```
+````
+if (element.length() > 3) {
+    downstream.push(element);
+}
+````
 
-uma vez, a próxima etapa recebe um elemento.
-Se fizer:
-
-
-### Cenário
-Imagine que você recebe uma sequência de números e quer emitir a soma acumulada.

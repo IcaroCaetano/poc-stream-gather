@@ -56,6 +56,8 @@ public class PocStreamGatherApplication {
 		Stream.of("Java",
 				"Java",
 				"Spring",
+				"Spring",
+				"Spring",
 				"Java",
 				"Docker",
 				"Docker",
