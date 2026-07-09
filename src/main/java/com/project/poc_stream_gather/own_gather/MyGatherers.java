@@ -1,5 +1,7 @@
 package com.project.poc_stream_gather.own_gather;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Gatherer;
 
 public class MyGatherers {
@@ -21,7 +23,7 @@ public class MyGatherers {
         );
     }
 
-public static Gatherer<Integer, int[], Integer> runningSum() {
+    public static Gatherer<Integer, int[], Integer> runningSum() {
 
         return Gatherer.ofSequential(
 
@@ -40,7 +42,7 @@ public static Gatherer<Integer, int[], Integer> runningSum() {
         );
     }
 
-public static <T> Gatherer<T, Set<T>, T> distinctCustom() {
+    public static <T> Gatherer<T, Set<T>, T> distinctCustom() {
 
         return Gatherer.ofSequential(
 

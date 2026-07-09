@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class PocStreamGatherApplication {
@@ -38,23 +39,21 @@ public class PocStreamGatherApplication {
 				.forEach(System.out::println);
 
 
-Stream.of(10, 20, 30, 40)
+		Stream.of(10, 20, 30, 40)
 
-     .gather(MyGatherers.runningSum())
-     
-     .forEach(System.out::println);
-	}
+			 .gather(MyGatherers.runningSum())
 
+			 .forEach(System.out::println);
 
-Stream.of(
-        "Java",
-        "Java",
-        "Spring",
-        "Java",
-        "Docker",
-        "Docker",
-        "Kubernetes"
-)
-.gather(MyGatherers.distinctCustom())
-.forEach(System.out::println);
+		Stream.of("Java",
+				"Java",
+				"Spring",
+				"Java",
+				"Docker",
+				"Docker",
+				"Kubernetes"
+				)
+				.gather(MyGatherers.distinctCustom())
+				.forEach(System.out::println);
+		}
 }
