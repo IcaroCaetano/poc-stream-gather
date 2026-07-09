@@ -470,3 +470,22 @@ Já:
 
 significa:
 ````Pare o Gatherer agora.````
+
+#### O que significa <? super T>?
+
+É um uso de contravariância em generics.
+
+````
+Gatherer.Downstream<? super T>
+````
+
+Significa que o downstream aceita:
+
+- T
+- qualquer supertipo de T
+
+- Exemplo:
+- 
+````
+T = Integer
+````
