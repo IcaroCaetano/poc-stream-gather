@@ -14,6 +14,8 @@ public class PocStreamGatherApplication {
 
 	public static void main(String[] args) {
 
+		System.out.println("New Gather windowFixed:");
+
 		var orders = List.of(
 
 				new Order("1", "João", 150),
@@ -38,12 +40,18 @@ public class PocStreamGatherApplication {
 
 				.forEach(System.out::println);
 
+		System.out.println();
+		System.out.println("New Gather runningSum:");
+
 
 		Stream.of(10, 20, 30, 40)
 
 			 .gather(MyGatherers.runningSum())
 
 			 .forEach(System.out::println);
+
+		System.out.println();
+		System.out.println("New Gather distinctCustom:");
 
 		Stream.of("Java",
 				"Java",
