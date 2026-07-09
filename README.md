@@ -446,3 +446,27 @@ if (!downstream.push(element)) {
 
 Se retornar false, significa que alguém interrompeu o processamento (por exemplo, uma operação 
 terminal como findFirst() já encontrou o resultado e não precisa de mais elementos).
+
+### O return true do Integrator
+
+Observe este código:
+
+````
+(state, element, downstream) -> {
+
+    downstream.push(element);
+
+    return true;
+}
+````
+
+O true indica:
+
+Continue processando os próximos elementos do Stream.
+
+Já:
+
+``return false;``
+
+significa:
+````Pare o Gatherer agora.````
