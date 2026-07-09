@@ -489,3 +489,19 @@ Significa que o downstream aceita:
 ````
 T = Integer
 ````
+
+O downstream pode ser:
+
+````
+Downstream<Integer>
+Downstream<Number>
+Downstream<Object>
+````
+
+Assim você pode fazer:
+
+````
+downstream.push(10);
+````
+
+independentemente de ele estar preparado para receber Integer, Number ou Object.
