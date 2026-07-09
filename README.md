@@ -424,3 +424,25 @@ if (element.length() > 3) {
 }
 ````
 
+#### O retorno de push()
+
+Pouca gente percebe isso.
+
+push() retorna um boolean:
+
+````
+boolean continuar = downstream.push(element);
+````
+
+Esse retorno informa se o próximo estágio ainda deseja receber elementos.
+
+Exemplo:
+
+````
+if (!downstream.push(element)) {
+    return false;
+}
+````
+
+Se retornar false, significa que alguém interrompeu o processamento (por exemplo, uma operação 
+terminal como findFirst() já encontrou o resultado e não precisa de mais elementos).
