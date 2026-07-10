@@ -31,6 +31,24 @@ public class PocStreamGatherApplication {
 
 		service.process(orders);
 
+		/*
+			Saida:
+
+			New Gather windowFixed:
+			Enviando lote
+			Order[id=1, customer=João, amount=150.0]
+			Order[id=2, customer=Maria, amount=220.0]
+			Order[id=3, customer=José, amount=300.0]
+			----------------
+			Enviando lote
+			Order[id=4, customer=Pedro, amount=180.0]
+			Order[id=5, customer=Ana, amount=90.0]
+			Order[id=6, customer=Lucas, amount=450.0]
+			----------------
+			Enviando lote
+			Order[id=7, customer=Carla, amount=120.0]
+		 */
+
 
 		List.of("Java", "25")
 
@@ -39,6 +57,16 @@ public class PocStreamGatherApplication {
 				.gather(MyGatherers.repeat(3))
 
 				.forEach(System.out::println);
+
+		/*
+			Saida:
+			Java
+			Java
+			Java
+			25
+			25
+			25
+		 */
 
 		System.out.println();
 		System.out.println("New Gather runningSum:");
@@ -49,6 +77,14 @@ public class PocStreamGatherApplication {
 			 .gather(MyGatherers.runningSum())
 
 			 .forEach(System.out::println);
+
+		/*
+			New Gather runningSum:
+			10
+			30
+			60
+			100
+		 */
 
 		System.out.println();
 		System.out.println("New Gather distinctCustom:");
@@ -65,5 +101,15 @@ public class PocStreamGatherApplication {
 				)
 				.gather(MyGatherers.distinctCustom())
 				.forEach(System.out::println);
+
+			/*
+				Saida:
+
+				New Gather distinctCustom:
+				Java
+				Spring
+				Docker
+				Kubernetes
+			 */
 		}
 }
