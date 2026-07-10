@@ -111,5 +111,19 @@ public class PocStreamGatherApplication {
 				Docker
 				Kubernetes
 			 */
+
+			System.out.println();
+			System.out.println("New Gather batch:");
+
+			Stream.of(1,2,3,4,5,6,7)
+				.gather(MyGatherers.batch(3))
+				.forEach(System.out::println);
+
+			/*
+			New Gather batch:
+			[1, 2, 3]
+			[4, 5, 6]
+			[7]
+			 */
 		}
 }

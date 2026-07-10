@@ -1,6 +1,8 @@
 package com.project.poc_stream_gather.own_gather;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Gatherer;
 
@@ -57,6 +59,32 @@ public class MyGatherers {
 
                     return true;
                 })
+        );
+    }
+
+    public static <T> Gatherer<T, List<T>, List<T>> batch(int size) {
+
+        return Gatherer.ofSequential(
+
+                ArrayList::new,
+
+                Gatherer.Integrator.ofGreedy((batch, element, downstream) -> {
+
+                    batch.add(element);
+
+                    if (batch.size() == size) {
+                        downstream.push(List.copyOf(batch));
+                        batch.clear();
+                    }
+
+                    return true;
+                }),
+
+                (batch, downstream) -> {
+                    if (!batch.isEmpty()) {
+                        downstream.push(List.copyOf(batch));
+                    }
+                }
         );
     }
 }
