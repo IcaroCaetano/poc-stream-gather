@@ -505,3 +505,10 @@ downstream.push(10);
 ````
 
 independentemente de ele estar preparado para receber Integer, Number ou Object.
+
+Output Gather Batch
+```
+[1, 2, 3]
+[4, 5, 6]
+[7]
+```
