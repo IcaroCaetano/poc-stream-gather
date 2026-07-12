@@ -126,4 +126,9 @@ public class PocStreamGatherApplication {
 			[7]
 			 */
 		}
+
+
+Stream.of(10, 20, 30, 40, 50)
+      .gather(RunningAverageGatherers.runningAverage())
+      .forEach(System.out::println);
 }
