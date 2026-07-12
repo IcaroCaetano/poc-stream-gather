@@ -107,4 +107,10 @@ public static Gatherer<Number, State, Double> runningAverage() {
                 })
         );
     }
+
+private static class State {
+        double sum = 0;
+        long count = 0;
+    }
+
 }
