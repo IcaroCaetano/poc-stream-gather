@@ -87,4 +87,24 @@ public class MyGatherers {
                 }
         );
     }
+
+public static Gatherer<Number, State, Double> runningAverage() {
+
+        return Gatherer.ofSequential(
+
+                State::new,
+
+                Gatherer.Integrator.ofGreedy((state, element, downstream) -> {
+
+                    state.sum += element.doubleValue();
+                    state.count++;
+
+                    double average = state.sum / state.count;
+
+                    downstream.push(average);
+
+                    return true;
+                })
+        );
+    }
 }
