@@ -125,10 +125,13 @@ public class PocStreamGatherApplication {
 			[4, 5, 6]
 			[7]
 			 */
+
+		System.out.println();
+		System.out.println("New Gather runningAverage:");
+
+		Stream.of(10, 20, 30, 40, 50)
+				.gather(MyGatherers.runningAverage())
+				.forEach(System.out::println);
 		}
 
-
-Stream.of(10, 20, 30, 40, 50)
-      .gather(RunningAverageGatherers.runningAverage())
-      .forEach(System.out::println);
 }
